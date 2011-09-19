@@ -1,0 +1,25 @@
+﻿@inherits NuSpec.RazorHosting.TemplateBase.RazorTemplateBase
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+	<metadata>
+		<id>@Context.Id</id>
+		<version>@Context.Version</version>
+		<authors>@string.Join(", ", Context.Authors)</authors>
+		<owners>@string.Join(", ", Context.Owners)</owners>
+		<licenseUrl>@Context.LicenseUrl</licenseUrl>
+		<projectUrl>@Context.ProjectUrl</projectUrl>
+		<iconUrl>@Context.IconUrl</iconUrl>
+		<requireLicenseAcceptance>@Context.RequireLicenseAcceptance.ToLower()</requireLicenseAcceptance>
+		<description>@Context.Description</description>
+		<tags>@string.Join(" ", Context.Tags)</tags>
+		@if( Context.Dependencies!=null && Context.Dependencies.Length>0 )
+		{
+		<dependencies>
+			@foreach (var dependency in Context.Dependencies)
+			{
+			<dependency id="@dependency.Id" version="@dependency.Version" />
+			}
+		</dependencies>
+		}
+	</metadata>
+</package>

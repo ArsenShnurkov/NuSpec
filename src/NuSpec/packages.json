@@ -1,0 +1,273 @@
+[
+	{
+		id: "Magnetix.Collections.Cache",
+		files: ["Magnetix\\Collections\\Cache.cs"]
+	},
+	{
+		id: "Magnetix.Collections.DefaultableDictionary",
+		files: ["Magnetix\\Collections\\DefaultableDictionary.cs", "Magnetix\\Extensions\\DefaultableDictionaryExtensions.cs"]
+	},
+	{
+		id: "Magnetix.Collections.DynamicComparer",
+		files: ["Magnetix\\Collections\\DynamicComparer.cs"],
+		dependencies: [{id: "Magnetix.Collections.SortOrder"}]
+	},
+	{
+		id: "Magnetix.Collections.DynamicEqualityComparer",
+		files: ["Magnetix\\Collections\\DynamicEqualityComparer.cs"]
+	},
+	{
+		id: "Magnetix.Collections.LinkedComparer",
+		files: ["Magnetix\\Collections\\LinkedComparer.cs"]
+	},
+	{
+		id: "Magnetix.Collections.PagedResult",
+		files: ["Magnetix\\Collections\\IPagedResult.cs","Magnetix\\Collections\\PagedResult.cs","Magnetix\\Extensions\\PagedResultExtensions.cs"],
+		dependencies: [{id: "Magnetix.Collections.SortOrder"}]
+	},
+	{
+		id: "Magnetix.Collections.Range",
+		files: ["Magnetix\\Collections\\Range.cs","Magnetix\\Collections\\RangeBuilder.cs","Magnetix\\Extensions\\RangeExtensions.cs"]
+	},
+	{
+		id: "Magnetix.Collections.ReverseComparer",
+		files: ["Magnetix\\Collections\\ReverseComparer.cs"]
+	},
+	{
+		id: "Magnetix.Collections.SortOrder",
+		files: ["Magnetix\\Collections\\SortOrder.cs"]
+	},
+	{
+		id: "Magnetix.Configuration.Settings",
+		files: ["Magnetix\\Configuration\\Settings\\AppSettingsSource.cs","Magnetix\\Configuration\\Settings\\ConversionIssue.cs","Magnetix\\Configuration\\Settings\\ConversionIssueReporter.cs","Magnetix\\Configuration\\Settings\\ISettingsSource.cs","Magnetix\\Configuration\\Settings\\OptionalSettingAttribute.cs","Magnetix\\Configuration\\Settings\\SettingsNamingConvention.cs","Magnetix\\Configuration\\Settings\\SettingsProvider.cs"],
+		dependencies: [{id: "Magnetix.Converters.ObjectConverter"}]
+	},
+	{
+		id: "Magnetix.Configuration.Settings.StructureMap",
+		files: ["Magnetix\\Configuration\\Settings\\StructureMap\\AppSettingsRegistry.cs","Magnetix\\Configuration\\Settings\\StructureMap\\SettingsRegistrationConvention.cs"],
+		dependencies: [{id: "StructureMap"},{id: "Magnetix.Configuration.Settings"}]
+	},
+	{
+		id: "Magnetix.Converters.ObjectConverter",
+		files: ["Magnetix\\Converters\\ArrayConverterFamily.cs","Magnetix\\Converters\\EnumConverterFamily.cs","Magnetix\\Converters\\IObjectConverter.cs","Magnetix\\Converters\\IObjectConverterFamily.cs","Magnetix\\Converters\\NullableConverterFamily.cs","Magnetix\\Converters\\ObjectConverter.cs","Magnetix\\Converters\\TypeDescriptorFamily.cs"],
+		dependencies: [{id: "Magnetix.Collections.Cache"},{id: "Magnetix.Extensions.NullableTypeExtensions"},{id: "Magnetix.Extensions.TypeExtensions"}]
+	},
+	{
+		id: "Magnetix.Extensions.ArrayExtensions",
+		files: ["Magnetix\\Extensions\\ArrayExtensions.cs"]
+	},
+	{
+		id: "Magnetix.Extensions.AttributeExtensions",
+		files: ["Magnetix\\Extensions\\AttributeExtensions.cs"]
+	},
+	{
+		id: "Magnetix.Extensions.DateTimeExtensions",
+		files: ["Magnetix\\Extensions\\DateTimeExtensions.cs","Magnetix\\Extensions\\TimeSelector.cs"],
+		dependencies: [{id: "Magnetix.SystemTime"}]
+	},
+	{
+		id: "Magnetix.Extensions.DictionaryExtensions",
+		files: ["Magnetix\\Extensions\\DictionaryExtensions.cs"],
+		dependencies: [{id: "Magnetix.Extensions.ZipExtensions"}]
+	},
+	{
+		id: "Magnetix.Extensions.DisposableExtensions",
+		files: ["Magnetix\\Extensions\\DisposableExtensions.cs"]
+	},
+	{
+		id: "Magnetix.Extensions.EnumerableExtensions",
+		files: ["Magnetix\\Extensions\\EnumerableExtensions.cs"],
+		dependencies: [{id: "Magnetix.Collections.DynamicEqualityComparer"}]
+	},
+	{
+		id: "Magnetix.Extensions.HashSetExtensions",
+		files: ["Magnetix\\Extensions\\HashSetExtensions.cs"],
+		dependencies: [{id: "Magnetix.Extensions.ReflectionExtensions"}]
+	},
+	{
+		id: "Magnetix.Extensions.HttpResponseExtensions",
+		files: ["Magnetix\\Extensions\\HttpResponseExtensions.cs"]
+	},
+	{
+		id: "Magnetix.Extensions.ImageFormatExtensions",
+		files: ["Magnetix\\Extensions\\ImageFormatExtensions.cs"],
+		dependencies: [{id: "Magnetix.Extensions.StringExtensions"},{id: "Magnetix.Reflection.ReflectionHelper"}]
+
+	},
+	{
+		id: "Magnetix.Extensions.JoinStringExtensions",
+		files: ["Magnetix\\Extensions\\JoinStringExtensions.cs"]
+	},
+	{
+		id: "Magnetix.Extensions.ListExtensions",
+		files: ["Magnetix\\Extensions\\ListExtensions.cs"]
+	},
+	{
+		id: "Magnetix.Extensions.MaxByExtensions",
+		files: ["Magnetix\\Extensions\\MaxByExtensions.cs"]
+	},
+	{
+		id: "Magnetix.Extensions.MemoizeExtensions",
+		files: ["Magnetix\\Extensions\\MemoizeExtensions.cs"]
+	},
+	{
+		id: "Magnetix.Extensions.MinByExtensions",
+		files: ["Magnetix\\Extensions\\MinByExtensions.cs"]
+	},
+	{
+		id: "Magnetix.Extensions.NullableTypeExtensions",
+		files: ["Magnetix\\Extensions\\NullableTypeExtensions.cs"]
+	},
+	{
+		id: "Magnetix.Extensions.ObjectExtensions",
+		files: ["Magnetix\\Extensions\\ObjectExtensions.cs"]
+	},
+	{
+		id: "Magnetix.Extensions.RaiseExtensions",
+		files: ["Magnetix\\Extensions\\RaiseExtensions.cs"]
+	},
+	{
+		id: "Magnetix.Extensions.ReflectionExtensions",
+		files: ["Magnetix\\Extensions\\ReflectionExtensions.cs"],
+		dependencies: [{id: "Magnetix.Extensions.TypeExtensions"}]
+	},
+	{
+		id: "Magnetix.Extensions.RepeatExtensions",
+		files: ["Magnetix\\Extensions\\RepeatExtensions.cs"]
+	},
+	{
+		id: "Magnetix.Extensions.ShuffleExtensions",
+		files: ["Magnetix\\Extensions\\ShuffleExtensions.cs"]
+	},
+	{
+		id: "Magnetix.Extensions.SplitStringExtensions",
+		files: ["Magnetix\\Extensions\\SplitStringExtensions.cs"]
+	},
+	{
+		id: "Magnetix.Extensions.StringExtensions",
+		files: ["Magnetix\\Extensions\\StringExtensions.cs"]
+	},
+	{
+		id: "Magnetix.Extensions.StringParseExtensions",
+		files: ["Magnetix\\Extensions\\StringParseExtensions.cs"],
+		dependencies: [{id: "Magnetix.Maybe"},{id: "Magnetix.Extensions.StringExtensions"}]
+	},
+	{
+		id: "Magnetix.Extensions.SynchronizeExtensions",
+		files: ["Magnetix\\Extensions\\SynchronizeExtensions.cs"]
+	},
+	{
+		id: "Magnetix.Extensions.TimesExtensions",
+		files: ["Magnetix\\Extensions\\TimesExtensions.cs"]
+	},
+	{
+		id: "Magnetix.Extensions.ToDelimitedStringExtensions",
+		files: ["Magnetix\\Extensions\\ToDelimitedStringExtensions.cs"]
+	},
+	{
+		id: "Magnetix.Extensions.TrimStringExtensions",
+		files: ["Magnetix\\Extensions\\TrimStringExtensions.cs"]
+	},
+	{
+		id: "Magnetix.Extensions.TypeExtensions",
+		files: ["Magnetix\\Extensions\\TypeExtensions.cs"]
+	},
+	{
+		id: "Magnetix.Extensions.WhileExtensions",
+		files: ["Magnetix\\Extensions\\WhileExtensions.cs"]
+	},
+	{
+		id: "Magnetix.Extensions.ZipExtensions",
+		files: ["Magnetix\\Extensions\\ZipExtensions.cs"],
+		dependencies: [{id: "Magnetix.Tuple"}]
+	},
+	{
+		id: "Magnetix.Extensions.TypeExtensions",
+		files: ["Magnetix\\Extensions\\TypeExtensions.cs"]
+	},
+	{
+		id: "Magnetix.Policy.CircuitBreaker",
+		files: ["Magnetix\\Policy\\CircuitBreaker.cs"],
+		dependencies: [{id: "Magnetix.SystemTime"},{id: "Magnetix.Policy.TimedLock"}]
+	},
+	{
+		id: "Magnetix.Policy.TimedLock",
+		files: ["Magnetix\\Policy\\TimedLock.cs"],
+		dependencies: [{id: "Magnetix.Disposable"}]
+	},
+	{
+		id: "Magnetix.Reflection.AssemblyHelper",
+		files: ["Magnetix\\Reflection\\AssemblyHelper.cs"]
+	},
+	{
+		id: "Magnetix.Reflection.AssemblyScanner",
+		files: ["Magnetix\\Reflection\\AssemblyScanner.cs","Magnetix\\Reflection\\DefaultScanningConvention.cs","Magnetix\\Reflection\\FindAllTypes.cs","Magnetix\\Reflection\\IAssemblyScanner.cs","Magnetix\\Reflection\\IHideBaseTypes.cs","Magnetix\\Reflection\\IScanningConvention.cs"],
+		dependencies: [{id: "Magnetix.Reflection.AssemblyHelper"},{id: "Magnetix.Extensions.ReflectionExtensions"},{id: "Magnetix.Extensions.TypeExtensions"},{id: "Magnetix.Util.CompositeFilter"}]
+	},
+	{
+		id: "Magnetix.Reflection.AssemblyVersion",
+		files: ["Magnetix\\Reflection\\AssemblyVersion.cs"],
+		dependencies: [{id: "Magnetix.Reflection.AssemblyHelper"}]
+	},
+	{
+		id: "Magnetix.Reflection.ReflectionHelper",
+		files: ["Magnetix\\Reflection\\ReflectionHelper.cs"]
+	},
+	{
+		id: "Magnetix.Disposable",
+		files: ["Magnetix\\Disposable.cs"]
+	},
+	{
+		id: "Magnetix.Guard",
+		files: ["Magnetix\\Guard.cs"]
+	},
+	{
+		id: "Magnetix.Maybe",
+		files: ["Magnetix\\Maybe.cs","Magnetix\\Result.cs","Magnetix\\Extensions\\MaybeExtensions.cs"]
+	},
+	{
+		id: "Magnetix.SystemTime",
+		files: ["Magnetix\\SystemTime.cs"]
+	},
+	{
+		id: "Magnetix.Tuple",
+		files: ["Magnetix\\Tuple.cs"]
+	},
+	{
+		id: "Magnetix.WeakReference",
+		files: ["Magnetix\\WeakReference.cs"]
+	},
+	{
+		id: "Magnetix.Util.AsyncHelper",
+		files: ["Magnetix\\Util\\AsyncHelper.cs"]
+	},
+	{
+		id: "Magnetix.Util.DisposableAction",
+		files: ["Magnetix\\Util\\DisposableAction.cs"],
+		dependencies: [{id: "Magnetix.Disposable"}]
+	},
+	{
+		id: "Magnetix.Util.CompositeFilter",
+		files: ["Magnetix\\Util\\CompositeFilter.cs","Magnetix\\Util\\CompositePredicate.cs"]
+	},
+	{
+		id: "Magnetix.Util.Enumeration",
+		files: ["Magnetix\\Util\\Enumeration.cs"]
+	},
+	{
+		id: "Magnetix.Util.ObjectDumper",
+		files: ["Magnetix\\Util\\ObjectDumper.cs"]
+	},
+	{
+		id: "Magnetix.Util.RandomEnumerable",
+		files: ["Magnetix\\Util\\RandomEnumerable.cs"]
+	},
+	{
+		id: "Magnetix.Web.WebControls.Pager",
+		files: ["Magnetix\\Web\\WebControls\\Pager.cs"]
+	}
+]
+
+
+
+
